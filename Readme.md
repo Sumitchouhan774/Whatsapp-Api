@@ -1,7 +1,7 @@
 
-# 📄 WhatsApp Automation API – Documentation
+# WhatsApp Automation API – Documentation
 
-## 🧰 Tech Stack
+## Tech Stack
 - **Backend Framework:** Node.js + Express.js
 - **WhatsApp Integration:** [`venom-bot`](https://github.com/orkestral/venom)
 - **Containerization:** Docker
@@ -9,45 +9,23 @@
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### 🔧 Installation
+### Installation
 
 ```bash
 npm install
 ```
 
-### ▶️ Run the server
+### Run the server
 
 ```bash
 node index.js
 ```
 
-### 🐳 Run with Docker
+### Run with Docker
 
-#### 1. Create a `Dockerfile`
-
-```dockerfile
-# Dockerfile
-FROM node:18
-
-# Set working directory
-WORKDIR /app
-
-# Copy files
-COPY . .
-
-# Install dependencies
-RUN npm install
-
-# Expose port
-EXPOSE 5000
-
-# Run app
-CMD ["node", "index.js"]
-```
-
-#### 2. Build & Run
+#### Build & Run
 
 ```bash
 docker build -t whatsapp-automation .
@@ -56,7 +34,7 @@ docker run -p 5000:5000 whatsapp-automation
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### 1. **Create / Init Session**
 
@@ -173,14 +151,14 @@ docker run -p 5000:5000 whatsapp-automation
 
 ---
 
-## 🗂️ Session Storage
+## Session Storage
 
 - Session tokens are saved in the `./tokens/:sessionName` folder.
 - Deleting a session also deletes its folder using `fs.rmSync`.
 
 ---
 
-## 🧠 Internal Architecture
+## Internal Architecture
 
 ```
 index.js
@@ -202,7 +180,7 @@ index.js
 
 ---
 
-## 🔐 Notes & Best Practices
+## Notes & Best Practices
 
 - Ensure session names are unique across devices.
 - Use a process manager like PM2 or Docker to persist sessions.
